@@ -13,7 +13,7 @@
 
     <button v-if="!favouriteFilms.includes(selectedFilm)" v-on:click="addtoFavourites">Add Film</button>
 
-    <favourite-films :favouriteFilms="favouriteFilms"></favourite-films>
+    <favourite-films v-if="selectedFilm" :favouriteFilms="favouriteFilms"></favourite-films>
       
 
     </div>
@@ -48,7 +48,11 @@ export default {
     .then(films => this.films = films)
 
     eventBus.$on('film-selected', (film) => {
-      this.selectedFilm = film
+      this.selectedFilm = film;
+    }) 
+
+    eventBus.$on('film-deleted', (index) => {
+      this.favouriteFilms.splice(index, 1);
     })
   },
   methods: {
