@@ -1,5 +1,5 @@
 <template> 
-    <div v-if="film">
+    <div v-if="film" id="filmDetail">
         <h3>{{film.title}}</h3>
         <p>Description: {{film.description}}</p>
         <p>Director: {{film.director}}</p>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { eventBus } from "../main.js";
+// import { eventBus } from "../main.js";
 export default {
     name: 'film-detail',
     props: ['film']

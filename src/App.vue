@@ -20,7 +20,7 @@
 <script>
 import { eventBus } from './main.js'
 import FilmsList from './components/FilmsList.vue';
-import FilmDetail from'./components/FilmDetail.vue';
+import FilmDetail from './components/FilmDetail.vue';
 
 export default {
   name: 'app',
@@ -41,7 +41,7 @@ export default {
     .then(films => this.films = films)
 
     eventBus.$on('film-selected', (film) => {
-    this.selectedFilm = film
+      this.selectedFilm = film
     })
   }
 }
