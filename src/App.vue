@@ -9,8 +9,11 @@
       <option v-for="film in films" :key="film.id" :value="film" >{{film.title}}</option>
     </select>
 
-    <film-detail v-if="selectedFilm" :selectedFilm='selectedFilm'></film-detail>
+    <film-detail v-if="selectedFilm" :film='selectedFilm'></film-detail>
 
+    <button v-if="!favouriteFilms.includes(selectedFilm)" v-on:click="addtoFavourites">Add Film</button>
+
+    <favourite-films :favouriteFilms="favouriteFilms"></favourite-films>
       
 
     </div>
@@ -21,19 +24,23 @@
 import { eventBus } from './main.js'
 import FilmsList from './components/FilmsList.vue';
 import FilmDetail from './components/FilmDetail.vue';
+import FavouriteFilms from './components/FavouriteFilms.vue';
 
 export default {
   name: 'app',
   data() {
     return {
       films: [],
-      selectedFilm: null
+      selectedFilm: null,
+      favouriteFilms: []
       
     }
   },
   components: {
     'films-list': FilmsList,
-    'film-detail': FilmDetail
+    'film-detail': FilmDetail,
+    'favourite-films': FavouriteFilms
+
   },
   mounted(){
     fetch('https://ghibliapi.herokuapp.com/films')
@@ -43,6 +50,11 @@ export default {
     eventBus.$on('film-selected', (film) => {
       this.selectedFilm = film
     })
+  },
+  methods: {
+    addtoFavourites: function() {
+      this.favouriteFilms.push(this.selectedFilm)
+    }
   }
 }
 </script>

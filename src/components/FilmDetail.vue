@@ -17,8 +17,6 @@
 export default {
     name: 'film-detail',
     props: ['film']
-
-
 }
 </script>
 
