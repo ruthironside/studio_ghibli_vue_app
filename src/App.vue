@@ -2,8 +2,7 @@
   <div class="body">
     <header class="header">Studio Ghibli Films</header>
     <div class="main-container">
-      <!-- <films-list :films='films'></films-list> -->
-    <label for="film_select">Select a Film:</label>
+    <label for="film_select">Pick a film:</label>
     <select id="film_select" v-model="selectedFilm">
       <option disabled value="">Select a film</option>
       <option v-for="film in films" :key="film.id" :value="film" >{{film.title}}</option>
@@ -11,12 +10,14 @@
 
     <film-detail v-if="selectedFilm" :film='selectedFilm'></film-detail>
 
-    <button v-if="!favouriteFilms.includes(selectedFilm)" v-on:click="addtoFavourites">Add Film</button>
+    <button v-if="!favouriteFilms.includes(selectedFilm)" v-on:click="addtoFavourites">Add to favourites</button>
 
     <favourite-films v-if="selectedFilm" :favouriteFilms="favouriteFilms"></favourite-films>
       
 
     </div>
+
+    
   </div>
 </template>
 

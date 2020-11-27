@@ -4,7 +4,7 @@
             <ul>
                 <li v-for="(favouriteFilm, index) in favouriteFilms">
                 {{favouriteFilm.title}}
-                <button v-on:click="handleDelete(index)">Remove from favourites</button>
+                <button v-on:click="handleDelete(index)">remove</button>
                 </li>
             </ul>
 
