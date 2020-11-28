@@ -19,14 +19,14 @@ it('should have 2 films', () => {
 })
 
 // it('should have a description', () => {
-//   expect(wrapper.vm.films).('Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her.');
+//   expect(wrapper.find('description')).toBe(true);
 // })
 
 it('should be able to add a favourite', () => {
   wrapper.setData({selectedFilm: filmsData[0]}); 
-  wrapper.vm.addToFavourites(); 
+  wrapper.vm.addtoFavourites(); 
   expect(wrapper.vm.favouriteFilms).toHaveLength(1); 
-  expect(wrapper.vm.favouriteFilms[0].name).toMatch('Porco Rosso');
+
 })
 
 
