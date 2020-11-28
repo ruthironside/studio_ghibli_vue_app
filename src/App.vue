@@ -10,7 +10,7 @@
 
     <film-detail v-if="selectedFilm" :film='selectedFilm'></film-detail>
 
-    <button v-if="!favouriteFilms.includes(selectedFilm)" v-on:click="addtoFavourites">Add to favourites</button>
+    <button class="button" v-if="!favouriteFilms.includes(selectedFilm)" v-on:click="addtoFavourites">Add to favourites</button>
 
     <favourite-films v-if="selectedFilm" :favouriteFilms="favouriteFilms"></favourite-films>
       
@@ -67,10 +67,11 @@ export default {
 <style>
 
   body {
+    color: aliceblue;
     font-family: helvetica;
     margin: 30px;
-    background-image: url(https://musicboxtheatre.com/sites/default/files/styles/movie_stills/public/events/studio-ghibli-matinees/studio-ghibli-logo.jpg?itok=nsaBFZ6u);
-    background-size:auto
+    background-image: url(https://movies.mxdwn.com/wp-content/uploads/2017/08/studio-ghibli_00343987.jpg);
+    background-size:cover;
   
   }
 
@@ -79,18 +80,26 @@ export default {
     padding: 30px;
     text-align: center;
     color: rgb(254, 254, 254);
-    font-size: 30px;
-    background-size: cover;
-    background: url('https://dw9to29mmj727.cloudfront.net/promo/2016/5541-Ghibli_SeriesHeaders_Kiki_2000x800.jpg')
+    font-size: 40px;
 }
 
 .main-container {
+    margin: 30px;
     align-content: center;
+
   }
 
 #filmDetail {
-  background-color: #ffffff;
-  padding: 30px
+  color: aliceblue;
+  padding: 30px;
+  width: 40%;
+
+
+}
+
+.button {
+  color: rgb(48, 58, 134);
+  
 }
 
 </style>
