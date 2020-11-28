@@ -19,7 +19,7 @@ it('should have 2 films', () => {
 })
 
 // it('should have a description', () => {
-//   expect(wrapper.find('description')).toBe(true);
+//   expect(wrapper.vm.films).toMatch(["description"]);
 // })
 
 it('should be able to add a favourite', () => {

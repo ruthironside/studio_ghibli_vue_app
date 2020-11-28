@@ -69,18 +69,28 @@ export default {
   body {
     font-family: helvetica;
     margin: 30px;
+    background-image: url(https://musicboxtheatre.com/sites/default/files/styles/movie_stills/public/events/studio-ghibli-matinees/studio-ghibli-logo.jpg?itok=nsaBFZ6u);
+    background-size:auto
+  
   }
 
   .header {
     margin: 0px;
     padding: 30px;
     text-align: center;
-    color: rgb(13, 94, 75);
+    color: rgb(254, 254, 254);
     font-size: 30px;
+    background-size: cover;
+    background: url('https://dw9to29mmj727.cloudfront.net/promo/2016/5541-Ghibli_SeriesHeaders_Kiki_2000x800.jpg')
 }
 
 .main-container {
     align-content: center;
   }
+
+#filmDetail {
+  background-color: #ffffff;
+  padding: 30px
+}
 
 </style>
