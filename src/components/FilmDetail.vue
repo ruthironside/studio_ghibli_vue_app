@@ -13,7 +13,6 @@
 </template>
 
 <script>
-// import { eventBus } from "../main.js";
 export default {
     name: 'film-detail',
     props: ['film']
@@ -26,7 +25,7 @@ export default {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #375bd3;
     padding: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
     width: 40%;
     background-color: #ebf0ff;
@@ -34,4 +33,6 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     border-radius: 5px;
 }
+
+
 </style>

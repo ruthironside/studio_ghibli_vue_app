@@ -20,8 +20,5 @@ export default {
 
 <style lang="css" scoped>
 
-.film-list {
-    
-}
 
 </style>

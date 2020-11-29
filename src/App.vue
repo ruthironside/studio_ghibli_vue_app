@@ -12,7 +12,7 @@
 
     <button class="button" v-if="!favouriteFilms.includes(selectedFilm)" v-on:click="addtoFavourites">Add to favourites</button>
 
-    <favourite-films v-if="selectedFilm" :favouriteFilms="favouriteFilms"></favourite-films>
+    <favourite-films class="favourite-film" v-if="selectedFilm" :favouriteFilms="favouriteFilms"></favourite-films>
       
 
     </div>
@@ -97,7 +97,7 @@ export default {
 .button {
   border-radius: 5px;
   padding: 10px;
-  font: bold 11px Helvetica;
+  font: bold 11px Avenir;
   text-decoration: none;
   background-color: #EEEEEE;
   color: #375bd3;
@@ -112,5 +112,6 @@ export default {
 option {
   font: bold 11px Helvetica;
 }
+
 
 </style>
