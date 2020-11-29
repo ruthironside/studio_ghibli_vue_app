@@ -1,10 +1,10 @@
 <template>
     <div id="favourite_films">
-        <h3>Favourite Films</h3>
+        <h2>Favourite Films</h2>
             <ul>
                 <li v-for="(favouriteFilm, index) in favouriteFilms">
                 {{favouriteFilm.title}}
-                <button v-on:click="handleDelete(index)">remove</button>
+                <button class="button" v-on:click="handleDelete(index)">remove</button>
                 </li>
             </ul>
 
@@ -25,6 +25,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+#favourite_films {
+    text-decoration: none;
+}
+
 
 </style>

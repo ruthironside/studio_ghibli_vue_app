@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="film-list">
         <ul>
             <list-item v-for="(film, index) in films" :film="film" :key="index"></list-item>
         </ul>
@@ -18,6 +18,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css" scoped>
+
+.film-list {
+    
+}
 
 </style>

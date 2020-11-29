@@ -67,15 +67,18 @@ export default {
 <style>
 
   body {
-    color: aliceblue;
-    font-family: helvetica;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
     margin: 30px;
     background-image: url(https://movies.mxdwn.com/wp-content/uploads/2017/08/studio-ghibli_00343987.jpg);
     background-size:cover;
-  
-  }
+    text-align: left;
+    color: #ffffff;
+    margin-top: 40px;
+
+}
 
   .header {
+    font: bold 40px Avenir;
     margin: 0px;
     padding: 30px;
     text-align: center;
@@ -89,17 +92,25 @@ export default {
 
   }
 
-#filmDetail {
-  color: aliceblue;
-  padding: 30px;
-  width: 40%;
 
-
-}
 
 .button {
-  color: rgb(48, 58, 134);
+  border-radius: 5px;
+  padding: 10px;
+  font: bold 11px Helvetica;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #375bd3;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid#375bd3;
+  border-bottom: 1px solid#375bd3;
+  border-left: 1px solid #ffffff;
   
+}
+
+option {
+  font: bold 11px Helvetica;
 }
 
 </style>
